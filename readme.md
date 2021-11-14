@@ -2,7 +2,7 @@
 
 ---
 
-<h4 align="center">Scraping & Analyzing student accommodation properties across the United Kingdom from <a href="https://www.accommodationforstudents.com/" target="_blank">Student Accommodation UK</a> website with <a href="https://www.beerwulf.com/en-gb/c/all-beers" target="_blank">Python</a> and <a href="https://en.wikipedia.org/wiki/Microsoft_Power_BI" target="_blank">Power BI</a></h4>
+<h4 align="center">Scraping & Analyzing student accommodation properties across the United Kingdom from <a href="https://www.accommodationforstudents.com/" target="_blank">Student Accommodation UK</a> website with <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a> and <a href="https://en.wikipedia.org/wiki/Microsoft_Power_BI" target="_blank">Power BI</a></h4>
 
 <p align='center'>
 <img src='06_RESOURCES/built-with-love.svg'>
@@ -21,11 +21,11 @@
 
 ## Overview
 
-This project focuses on scraping properties for student accommodation across UK and their associated metrics from [Student Accommodation UK](https://www.accommodationforstudents.com/search-results?location=any&beds=0&searchType=any&price=&lettingPeriod=academicYear&geo=false&page=1), performing exploratory data analysis to generate insights and visualize them with the help of Power BI.
+This project focuses on scraping properties for student accommodation across UK and their associated metrics from [Student Accommodation UK][website_link], performing exploratory data analysis to generate insights and visualize them with the help of Power BI.
 
 The repository directory structure is as follows:
 
-├───Analyzing-Pokemons<br>
+├───UK-Student-Accommodation-Analysis<br>
 │ ├───01_WEBSCRAPING<br>
 │ ├───02_ETL<br>
 │ └───06_RESOURCES<br>
@@ -97,7 +97,7 @@ From this graphic we can observe a significant reduce in the time of scraping du
 
 If you have any doubts, queries or, suggestions then, please connect with me in any of the following platforms:
 
-[![Linkedin Badge][linkedinbadge]][linkedin] [![Twitter Badge](https://img.shields.io/badge/-@quantumudit-1ca0f1?style=flat&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/quantumudit)][twitter]
+[![Linkedin Badge][linkedinbadge]][linkedin] [![Twitter Badge][twitterbadge]][twitter]
 
 If you like my work then, you may support me at Patreon:
 
