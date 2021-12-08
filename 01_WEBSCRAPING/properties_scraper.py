@@ -1,8 +1,7 @@
 import pandas as pd
-import datetime
 import pyfiglet
 from concurrent.futures import ThreadPoolExecutor
-from fx_uk_student_properties_scraper_template import *
+from fx_properties_scraper_template import *
 
 def main() -> None:
     """
@@ -17,8 +16,8 @@ def load_data() -> None:
     This function loads the scraped data into a CSV file
     """
     
-    whisky_df = pd.DataFrame(all_properties)
-    whisky_df.to_csv('uk_student_properties_data.csv', index=False)
+    properties_df = pd.DataFrame(all_properties)
+    properties_df.to_csv('uk_student_properties_raw_data.csv', encoding='utf-8', index=False)
     return
 
 if __name__ == '__main__':
@@ -26,7 +25,7 @@ if __name__ == '__main__':
     scraper_title = "UK STUDENT ACCOMMODATION PROPERTIES SCRAPER"
     ascii_art_title = pyfiglet.figlet_format(scraper_title, font='small')
     
-    start_time = datetime.datetime.now()
+    start_time = datetime.now()
     
     print('\n\n')
     print(ascii_art_title)
@@ -34,13 +33,13 @@ if __name__ == '__main__':
     
     generate_page_links()
     
-    print(f'Total pages to scrape:{len(all_page_links)}')
+    print(f'Total pages to scrape: {len(all_page_links)}')
     print('Scraping student property details from each page...')
     print('\n')
     
     main()
     
-    end_time = datetime.datetime.now()
+    end_time = datetime.now()
     scraping_time = end_time - start_time
     
     print('\n')
@@ -53,4 +52,4 @@ if __name__ == '__main__':
     load_data()
     
     print('Data Exported to CSV...')
-    print('Webscraping completed !!!')
+    print('Webscraping Completed !!!')

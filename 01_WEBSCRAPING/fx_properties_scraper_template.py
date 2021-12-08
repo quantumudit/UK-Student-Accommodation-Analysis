@@ -1,6 +1,6 @@
 from requests_html import HTMLSession
 from urllib.parse import urljoin
-import datetime
+from datetime import datetime, timezone
 
 ROOT_URL = 'https://www.accommodationforstudents.com'
 
@@ -33,9 +33,11 @@ def scrape_content(page_url: str) -> None:
         It returns nothing but adds individual properties into the 'all_properties' list
     """
     
+    print('\n')
     print(f'Scraping properties from: {page_url}')
     
-    current_utc_timestamp = datetime.datetime.now(datetime.timezone.utc).strftime('%d-%b-%Y %H:%M:%S')
+    utc_timezone = timezone.utc
+    current_utc_timestamp = datetime.now(utc_timezone).strftime('%d-%b-%Y %H:%M:%S')
     
     response = session.get(page_url)
     content = response.html.find('div#property-grid article')
@@ -86,6 +88,9 @@ def scrape_content(page_url: str) -> None:
         
         all_properties.append(property_details)
     return
+
+# Testing the scraper template #
+# ---------------------------- #
 
 if __name__ == '__main__':
     
